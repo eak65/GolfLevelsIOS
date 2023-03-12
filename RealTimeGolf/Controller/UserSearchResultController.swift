@@ -14,6 +14,7 @@ class UserSearchResultController: UITableViewController, UISearchResultsUpdating
     var delegate : UserSearchResultDelegate?
     var users = [User]()
     var filteredUser = [User]()
+    var invitedUsers = [User]()
     var contacts = [CNContact]()
     var filteredContacts = [CNContact]()
 
@@ -87,12 +88,16 @@ class UserSearchResultController: UITableViewController, UISearchResultsUpdating
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as? UserCell else {
             fatalError()
         }
+        
         if indexPath.section == 0 {
             var user = filteredUser[indexPath.row]
             cell.nameLabel.text = user.name
             cell.rightButton.setTitle("Add", for: .normal)
             cell.lowerDetailLabel.isHidden = true
-            cell.buttonPress = { _ in
+            cell.buttonPress = { button in
+                self.invitedUsers.append(user)
+                button.setTitle("Remove", for: .normal)
+                cell.lowerDetailLabel.text = "Invitation sent!"
                 self.addUser(user: user)
             }
             

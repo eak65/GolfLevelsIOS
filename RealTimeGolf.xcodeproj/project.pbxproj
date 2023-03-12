@@ -19,6 +19,7 @@
 		29DA04C329BDAAD1003E971A /* MatchDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DA04C229BDAAD1003E971A /* MatchDetailController.swift */; };
 		29DA04C529BDB158003E971A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DA04C429BDB158003E971A /* UserCell.swift */; };
 		29DA04C729BDC0B7003E971A /* UserSearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DA04C629BDC0B7003E971A /* UserSearchResultController.swift */; };
+		29DA04C929BE4D71003E971A /* CreateTeamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DA04C829BE4D71003E971A /* CreateTeamsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		29DA04C229BDAAD1003E971A /* MatchDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailController.swift; sourceTree = "<group>"; };
 		29DA04C429BDB158003E971A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		29DA04C629BDC0B7003E971A /* UserSearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchResultController.swift; sourceTree = "<group>"; };
+		29DA04C829BE4D71003E971A /* CreateTeamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				29DA04BD29BD6396003E971A /* MatchTableViewController.swift */,
 				29DA04C229BDAAD1003E971A /* MatchDetailController.swift */,
 				29DA04C629BDC0B7003E971A /* UserSearchResultController.swift */,
+				29DA04C829BE4D71003E971A /* CreateTeamsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				29DA04AB29BD50B5003E971A /* ViewController.swift in Sources */,
 				29DA04BC29BD5944003E971A /* CreateController.swift in Sources */,
 				29DA04A729BD50B5003E971A /* AppDelegate.swift in Sources */,
+				29DA04C929BE4D71003E971A /* CreateTeamsController.swift in Sources */,
 				29DA04C129BD65F3003E971A /* MatchCell.swift in Sources */,
 				29DA04C329BDAAD1003E971A /* MatchDetailController.swift in Sources */,
 				29DA04C729BDC0B7003E971A /* UserSearchResultController.swift in Sources */,
