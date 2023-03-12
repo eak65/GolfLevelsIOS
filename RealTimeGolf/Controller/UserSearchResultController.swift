@@ -7,11 +7,15 @@
 
 import UIKit
 import Contacts
-
+protocol UserSearchResultDelegate {
+    func didSelectUser(user: User)
+}
 class UserSearchResultController: UITableViewController, UISearchResultsUpdating {
+    var delegate : UserSearchResultDelegate?
     var users = [User]()
     var filteredUser = [User]()
     var contacts = [CNContact]()
+    var filteredContacts = [CNContact]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,17 +49,32 @@ class UserSearchResultController: UITableViewController, UISearchResultsUpdating
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
+    }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Results"
+        }
+        if section == 1 {
+            return "Not on Golf Level"
+        }
+        return nil
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return filteredUser.count
+        if section == 0 {
+            return filteredUser.count
+        } else {
+            return filteredContacts.count
+        }
     }
     func updateSearchResults(for searchController: UISearchController) {
         let searchText = searchController.searchBar.text!
         filteredUser = users.filter { user in
             return user.name.contains(searchText)
+        }
+        filteredContacts = contacts.filter { user in
+            return user.givenName.contains(searchText) || user.phoneNumbers.first?.value.stringValue.contains(searchText) ?? false
         }
         DispatchQueue.main.async {
             
@@ -68,64 +87,50 @@ class UserSearchResultController: UITableViewController, UISearchResultsUpdating
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as? UserCell else {
             fatalError()
         }
-        cell.nameLabel.text = filteredUser[indexPath.row].name
-        cell.rightButton.setTitle("Add", for: .normal)
+        if indexPath.section == 0 {
+            var user = filteredUser[indexPath.row]
+            cell.nameLabel.text = user.name
+            cell.rightButton.setTitle("Add", for: .normal)
+            cell.lowerDetailLabel.isHidden = true
+            cell.buttonPress = { _ in
+                self.addUser(user: user)
+            }
+            
+        } else {
+            var contact = filteredContacts[indexPath.row]
+            cell.nameLabel.text = contact.givenName
+            cell.lowerDetailLabel.text = contact.phoneNumbers.first?.value.stringValue ?? ""
+            cell.rightButton.setTitle("Invite", for: .normal)
+            cell.lowerDetailLabel.isHidden = false
+            cell.buttonPress = { _ in
+                self.showSMS(contact: contact)
+            }
+        }
         return cell
+
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            
+        }
+       else if indexPath.section == 1 {
+           var contact = filteredContacts[indexPath.row]
+          showSMS(contact: contact)
+        }
+    }
+    func addUser(user:User) {
+        delegate?.didSelectUser(user: user)
+    }
+    func showSMS(contact: CNContact) {
+        var phoneNumber = contact.phoneNumbers.first?.value.stringValue
+        phoneNumber?.removeAll(where: { c in
+            return c == " " || c == "(" || c == ")" || c == "-"
+        })
+        let sms = "sms:\(String(describing: phoneNumber))&body=I would like to invite you to my match. Sign up with Golf Levels to get started."
+         let strURL = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+         UIApplication.shared.open(URL(string: strURL)!, options: [:], completionHandler: nil)
     }
     
-    /*
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-     
-     // Configure the cell...
-     
-     return cell
-     }
-     */
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+
     
 }

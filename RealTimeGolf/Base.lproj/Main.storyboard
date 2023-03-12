@@ -329,38 +329,50 @@
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="5H7-P6-f3M">
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Nha-5M-50i">
                                             <rect key="frame" x="20" y="11" width="353" height="48"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MJ-94-0ax">
-                                                    <rect key="frame" x="0.0" y="0.0" width="230" height="48"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="5H7-P6-f3M">
+                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="35"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MJ-94-0ax">
+                                                            <rect key="frame" x="0.0" y="0.0" width="230" height="35"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9v-Go-sXV">
+                                                            <rect key="frame" x="253" y="0.0" width="100" height="35"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="35" id="6kw-Zr-uM0"/>
+                                                                <constraint firstAttribute="width" constant="100" id="Viz-aR-Ff4"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="filled" title="Remove"/>
+                                                            <connections>
+                                                                <action selector="rightButtonPressed:" destination="M4s-Zl-1eS" eventType="touchUpInside" id="06f-dl-cbE"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8py-fA-oAC">
+                                                    <rect key="frame" x="0.0" y="36" width="353" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9v-Go-sXV">
-                                                    <rect key="frame" x="253" y="0.0" width="100" height="48"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="6kw-Zr-uM0"/>
-                                                        <constraint firstAttribute="width" constant="100" id="Viz-aR-Ff4"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" title="Remove"/>
-                                                    <connections>
-                                                        <action selector="rightButtonPressed:" destination="M4s-Zl-1eS" eventType="touchUpInside" id="06f-dl-cbE"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="5H7-P6-f3M" firstAttribute="leading" secondItem="n0I-jK-AXL" secondAttribute="leadingMargin" id="S7Y-2i-fm3"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="5H7-P6-f3M" secondAttribute="trailing" id="V0A-Z2-DnD"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="5H7-P6-f3M" secondAttribute="bottom" id="j5G-AN-iKE"/>
-                                        <constraint firstItem="5H7-P6-f3M" firstAttribute="top" secondItem="n0I-jK-AXL" secondAttribute="topMargin" id="lT3-hC-hYa"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Nha-5M-50i" secondAttribute="trailing" id="35u-mo-v6L"/>
+                                        <constraint firstItem="Nha-5M-50i" firstAttribute="leading" secondItem="n0I-jK-AXL" secondAttribute="leadingMargin" id="MAt-ZY-CAG"/>
+                                        <constraint firstItem="Nha-5M-50i" firstAttribute="top" secondItem="n0I-jK-AXL" secondAttribute="topMargin" id="PBb-MO-vif"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Nha-5M-50i" secondAttribute="bottom" id="fT6-1Q-he6"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="lowerDetailLabel" destination="8py-fA-oAC" id="W9e-g7-ETx"/>
                                     <outlet property="nameLabel" destination="5MJ-94-0ax" id="t6h-4R-NyE"/>
                                     <outlet property="rightButton" destination="E9v-Go-sXV" id="OFj-6z-Rvf"/>
                                 </connections>

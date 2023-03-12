@@ -15,14 +15,19 @@ class UserCell: UITableViewCell {
     }
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
-
+    @IBOutlet weak var lowerDetailLabel: UILabel!
+    var buttonPress : ((UIButton) -> ())?
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     @IBAction func rightButtonPressed(_ sender: Any) {
-        
+        guard let buttonPress = buttonPress, let sender = sender as? UIButton else {
+            fatalError()
+        }
+        buttonPress(sender)
     }
 
 }

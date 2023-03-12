@@ -9,7 +9,14 @@ import UIKit
 struct User {
     let name : String
 }
-class MatchDetailController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MatchDetailController: UIViewController, UITableViewDelegate, UITableViewDataSource, UserSearchResultDelegate {
+    func didSelectUser(user: User) {
+        users.append(user)
+        DispatchQueue.main.async { [self] in
+            tableView.reloadData()
+        }
+    }
+    
 
     @IBOutlet weak var tableView: UITableView!
     var searchController : UISearchController!
@@ -37,6 +44,7 @@ class MatchDetailController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
        var resultController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UserSearchResultController") as! UserSearchResultController
         searchController = UISearchController(searchResultsController: resultController)
+        resultController.delegate = self
         users.append(User(name: "Ethan"))
         users.append(User(name: "Ethan"))
         users.append(User(name: "Ethan"))
