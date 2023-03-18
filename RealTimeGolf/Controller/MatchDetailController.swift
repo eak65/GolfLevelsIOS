@@ -42,7 +42,7 @@ class MatchDetailController: UIViewController, UITableViewDelegate, UITableViewD
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-       var resultController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UserSearchResultController") as! UserSearchResultController
+       let resultController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UserSearchResultController") as! UserSearchResultController
         searchController = UISearchController(searchResultsController: resultController)
         resultController.delegate = self
         searchController.searchResultsUpdater = resultController

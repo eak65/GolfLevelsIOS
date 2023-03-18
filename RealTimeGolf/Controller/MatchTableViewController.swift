@@ -48,7 +48,7 @@ class MatchTableViewController: UIViewController, UITableViewDelegate, UITableVi
         let match = matches[indexPath.row]
         cell?.matchNameLabel.text = match.name
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MM-yy HH:mm a"
+        formatter.dateFormat = "dd-MM-yy hh:mm a"
         cell?.dateLabel.text = formatter.string(from: match.date)
         cell?.selectionStyle = .none
         return cell!

@@ -20,6 +20,9 @@
 		29DA04C529BDB158003E971A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DA04C429BDB158003E971A /* UserCell.swift */; };
 		29DA04C729BDC0B7003E971A /* UserSearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DA04C629BDC0B7003E971A /* UserSearchResultController.swift */; };
 		29DA04C929BE4D71003E971A /* CreateTeamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DA04C829BE4D71003E971A /* CreateTeamsController.swift */; };
+		29DA04CB29BE5212003E971A /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DA04CA29BE5212003E971A /* TextFieldCell.swift */; };
+		29EA0C4129BE8EE400BEA212 /* TeamSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA0C4029BE8EE400BEA212 /* TeamSelectCell.swift */; };
+		29EA0C4329BE900F00BEA212 /* ManuallyAssignController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA0C4229BE900F00BEA212 /* ManuallyAssignController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		29DA04C429BDB158003E971A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		29DA04C629BDC0B7003E971A /* UserSearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchResultController.swift; sourceTree = "<group>"; };
 		29DA04C829BE4D71003E971A /* CreateTeamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamsController.swift; sourceTree = "<group>"; };
+		29DA04CA29BE5212003E971A /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
+		29EA0C4029BE8EE400BEA212 /* TeamSelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSelectCell.swift; sourceTree = "<group>"; };
+		29EA0C4229BE900F00BEA212 /* ManuallyAssignController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManuallyAssignController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,7 @@
 				29DA04C229BDAAD1003E971A /* MatchDetailController.swift */,
 				29DA04C629BDC0B7003E971A /* UserSearchResultController.swift */,
 				29DA04C829BE4D71003E971A /* CreateTeamsController.swift */,
+				29EA0C4229BE900F00BEA212 /* ManuallyAssignController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -100,6 +107,8 @@
 			children = (
 				29DA04C029BD65F3003E971A /* MatchCell.swift */,
 				29DA04C429BDB158003E971A /* UserCell.swift */,
+				29DA04CA29BE5212003E971A /* TextFieldCell.swift */,
+				29EA0C4029BE8EE400BEA212 /* TeamSelectCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,10 +185,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				29DA04C529BDB158003E971A /* UserCell.swift in Sources */,
+				29EA0C4329BE900F00BEA212 /* ManuallyAssignController.swift in Sources */,
 				29DA04AB29BD50B5003E971A /* ViewController.swift in Sources */,
+				29DA04CB29BE5212003E971A /* TextFieldCell.swift in Sources */,
 				29DA04BC29BD5944003E971A /* CreateController.swift in Sources */,
 				29DA04A729BD50B5003E971A /* AppDelegate.swift in Sources */,
 				29DA04C929BE4D71003E971A /* CreateTeamsController.swift in Sources */,
+				29EA0C4129BE8EE400BEA212 /* TeamSelectCell.swift in Sources */,
 				29DA04C129BD65F3003E971A /* MatchCell.swift in Sources */,
 				29DA04C329BDAAD1003E971A /* MatchDetailController.swift in Sources */,
 				29DA04C729BDC0B7003E971A /* UserSearchResultController.swift in Sources */,

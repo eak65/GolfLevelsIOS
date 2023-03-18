@@ -127,8 +127,8 @@ class UserSearchResultController: UITableViewController, UISearchResultsUpdating
         delegate?.didSelectUser(user: user)
     }
     func showSMS(contact: CNContact) {
-        var phoneNumber = contact.phoneNumbers.first?.value.stringValue
-        phoneNumber?.removeAll(where: { c in
+        var phoneNumber = contact.phoneNumbers.first!.value.stringValue
+        phoneNumber.removeAll(where: { c in
             return c == " " || c == "(" || c == ")" || c == "-"
         })
         let sms = "sms:\(String(describing: phoneNumber))&body=I would like to invite you to my match. Sign up with Golf Levels to get started."
