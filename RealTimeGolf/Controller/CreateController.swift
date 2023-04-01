@@ -6,10 +6,21 @@
 //
 
 import UIKit
-protocol CreateDelegate: NSObject {
+protocol CreateDelegate {
     func didCreate(name: String, date: Date)
 }
-class CreateController: UIViewController {
+class CreateController: UIViewController, LoadableView {
+    
+    @IBOutlet weak var createButton: UIButton!
+    
+    func isLoading(showLoadingIndicator: Bool) {
+        //createButton.showsActivityIndicator
+    }
+    
+    func showError() {
+        
+    }
+    
     var delegate : CreateDelegate?
     
     @IBOutlet weak var matchNameLabel: UITextField!

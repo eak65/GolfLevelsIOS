@@ -9,11 +9,26 @@ import UIKit
 struct Match {
     let name : String
     let date : Date
+    let confirmed: [User]
 }
-class MatchTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CreateDelegate {
-
+class MatchTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MatchLoadableSuccessView {
     var matches = [Match]()
+    var addMatchButton : (() -> ())?
+    var didSelectMatch: ((Match)->())?
     
+    func showSuccess(object: Match) {
+        self.matches.append(object)
+        self.tableView.reloadData()
+    }
+    
+    func isLoading(showLoadingIndicator: Bool) {
+        
+    }
+    
+    func showError() {
+        
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return matches.count
     }
@@ -32,15 +47,7 @@ class MatchTableViewController: UIViewController, UITableViewDelegate, UITableVi
         // Do any additional setup after loading the view.
     }
    @objc func addMatch(){
-        var storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        guard let  createController = storyBoard.instantiateViewController(withIdentifier: "CreateController") as? CreateController else {
-            fatalError()
-        }
-       createController.delegate = self
-        if let sheet = createController.sheetPresentationController {
-            sheet.detents = [.medium()]
-        }
-        self.navigationController?.present(createController, animated: true)
+       self.addMatchButton?()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -54,13 +61,12 @@ class MatchTableViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell!
     }
     func didCreate(name: String, date: Date) {
-        matches.append(Match(name: name, date: date))
+        matches.append(Match(name: name, date: date, confirmed: [User]()))
         tableView.reloadData()
         
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var matchDetailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MatchDetailController")
-        self.navigationController?.pushViewController(matchDetailViewController, animated: true)
+        didSelectMatch?(matches[indexPath.row])
     }
     
 

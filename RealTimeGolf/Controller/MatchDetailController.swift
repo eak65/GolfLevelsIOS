@@ -6,10 +6,20 @@
 //
 
 import UIKit
-struct User {
-    let name : String
+
+protocol MatchDetailOutput {
+    func formTeamsWith(users: [User])
 }
 class MatchDetailController: UIViewController, UITableViewDelegate, UITableViewDataSource, UserSearchResultDelegate {
+    var formTeamsPressed : (([User]) -> ())?
+    func isLoading(showLoadingIndicator: Bool) {
+        
+    }
+    
+    func showError() {
+        
+    }
+    
     func didSelectUser(user: User) {
         invitedUsers.append(user)
         DispatchQueue.main.async { [self] in
@@ -111,8 +121,7 @@ class MatchDetailController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     @IBAction func formTeamsButtonPressed(_ sender: Any) {
-       var teamsController = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(identifier: "CreateTeamsController")
-        self.navigationController?.pushViewController(teamsController, animated: true)
+        formTeamsPressed?(self.confirmedUsers)
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2

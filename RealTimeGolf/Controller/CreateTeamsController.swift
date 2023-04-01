@@ -54,7 +54,7 @@ class CreateTeamsController: UIViewController, UITableViewDelegate, UITableViewD
         return numberOfTeams
     }
     @IBAction func manualAssignPressed(_ sender: Any) {
-        guard let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ManuallyAssignController") as? ManuallyAssignController else {
+        guard let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ManuallyAssignController") as? AssignController else {
             fatalError()
         }
         self.navigationController?.pushViewController(controller, animated: true)

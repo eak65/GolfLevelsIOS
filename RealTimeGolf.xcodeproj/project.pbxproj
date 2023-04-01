@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		290B933E29C5D79000347283 /* CreateMatchComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290B933D29C5D79000347283 /* CreateMatchComposer.swift */; };
+		290B934129C5D8DA00347283 /* NetworkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290B934029C5D8DA00347283 /* NetworkPresenter.swift */; };
+		290B934429C5D9B900347283 /* MatchLoadablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290B934329C5D9B900347283 /* MatchLoadablePresenter.swift */; };
+		290B934729C5DD5600347283 /* CreateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290B934629C5DD5600347283 /* CreateDelegate.swift */; };
+		290B934A29C5DDCB00347283 /* PostCreateMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290B934929C5DDCB00347283 /* PostCreateMatch.swift */; };
 		29DA04A729BD50B5003E971A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DA04A629BD50B5003E971A /* AppDelegate.swift */; };
 		29DA04A929BD50B5003E971A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DA04A829BD50B5003E971A /* SceneDelegate.swift */; };
 		29DA04AB29BD50B5003E971A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DA04AA29BD50B5003E971A /* ViewController.swift */; };
@@ -21,11 +26,23 @@
 		29DA04C729BDC0B7003E971A /* UserSearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DA04C629BDC0B7003E971A /* UserSearchResultController.swift */; };
 		29DA04C929BE4D71003E971A /* CreateTeamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DA04C829BE4D71003E971A /* CreateTeamsController.swift */; };
 		29DA04CB29BE5212003E971A /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DA04CA29BE5212003E971A /* TextFieldCell.swift */; };
+		29DEBC3329D8B06000A7FDB4 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DEBC3229D8B06000A7FDB4 /* MainTabController.swift */; };
+		29DEBC3529D8C81000A7FDB4 /* BetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DEBC3429D8C81000A7FDB4 /* BetController.swift */; };
+		29DEBC3729D8CAD500A7FDB4 /* UserHandicapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DEBC3629D8CAD500A7FDB4 /* UserHandicapCell.swift */; };
+		29DEBC3929D8CB3200A7FDB4 /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DEBC3829D8CB3200A7FDB4 /* StartController.swift */; };
+		29DEBC3B29D8CC9900A7FDB4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DEBC3A29D8CC9900A7FDB4 /* User.swift */; };
+		29DEBC3D29D8CFAC00A7FDB4 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DEBC3C29D8CFAC00A7FDB4 /* Team.swift */; };
+		29DEBC4129D8D6AB00A7FDB4 /* ActiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DEBC4029D8D6AB00A7FDB4 /* ActiveController.swift */; };
 		29EA0C4129BE8EE400BEA212 /* TeamSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA0C4029BE8EE400BEA212 /* TeamSelectCell.swift */; };
-		29EA0C4329BE900F00BEA212 /* ManuallyAssignController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA0C4229BE900F00BEA212 /* ManuallyAssignController.swift */; };
+		29EA0C4329BE900F00BEA212 /* AssignController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA0C4229BE900F00BEA212 /* AssignController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		290B933D29C5D79000347283 /* CreateMatchComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMatchComposer.swift; sourceTree = "<group>"; };
+		290B934029C5D8DA00347283 /* NetworkPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPresenter.swift; sourceTree = "<group>"; };
+		290B934329C5D9B900347283 /* MatchLoadablePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchLoadablePresenter.swift; sourceTree = "<group>"; };
+		290B934629C5DD5600347283 /* CreateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDelegate.swift; sourceTree = "<group>"; };
+		290B934929C5DDCB00347283 /* PostCreateMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCreateMatch.swift; sourceTree = "<group>"; };
 		29DA04A329BD50B5003E971A /* RealTimeGolf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealTimeGolf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29DA04A629BD50B5003E971A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29DA04A829BD50B5003E971A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,8 +59,15 @@
 		29DA04C629BDC0B7003E971A /* UserSearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchResultController.swift; sourceTree = "<group>"; };
 		29DA04C829BE4D71003E971A /* CreateTeamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamsController.swift; sourceTree = "<group>"; };
 		29DA04CA29BE5212003E971A /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
+		29DEBC3229D8B06000A7FDB4 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		29DEBC3429D8C81000A7FDB4 /* BetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetController.swift; sourceTree = "<group>"; };
+		29DEBC3629D8CAD500A7FDB4 /* UserHandicapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHandicapCell.swift; sourceTree = "<group>"; };
+		29DEBC3829D8CB3200A7FDB4 /* StartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
+		29DEBC3A29D8CC9900A7FDB4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		29DEBC3C29D8CFAC00A7FDB4 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		29DEBC4029D8D6AB00A7FDB4 /* ActiveController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveController.swift; sourceTree = "<group>"; };
 		29EA0C4029BE8EE400BEA212 /* TeamSelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSelectCell.swift; sourceTree = "<group>"; };
-		29EA0C4229BE900F00BEA212 /* ManuallyAssignController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManuallyAssignController.swift; sourceTree = "<group>"; };
+		29EA0C4229BE900F00BEA212 /* AssignController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +81,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		290B933F29C5D87A00347283 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				290B934029C5D8DA00347283 /* NetworkPresenter.swift */,
+				290B934629C5DD5600347283 /* CreateDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		290B934229C5D9AA00347283 /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+				290B933D29C5D79000347283 /* CreateMatchComposer.swift */,
+			);
+			path = Composer;
+			sourceTree = "<group>";
+		};
+		290B934529C5D9BF00347283 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				290B934329C5D9B900347283 /* MatchLoadablePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		290B934829C5DDB500347283 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				290B934929C5DDCB00347283 /* PostCreateMatch.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
 		29DA049A29BD50B5003E971A = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +133,10 @@
 		29DA04A529BD50B5003E971A /* RealTimeGolf */ = {
 			isa = PBXGroup;
 			children = (
+				290B934829C5DDB500347283 /* Remote */,
+				290B934529C5D9BF00347283 /* Presenter */,
+				290B934229C5D9AA00347283 /* Composer */,
+				290B933F29C5D87A00347283 /* Delegate */,
 				29DA04BF29BD65DC003E971A /* View */,
 				29DA04BA29BD592C003E971A /* Controller */,
 				29DA04A629BD50B5003E971A /* AppDelegate.swift */,
@@ -85,6 +146,8 @@
 				29DA04AF29BD50B7003E971A /* Assets.xcassets */,
 				29DA04B129BD50B7003E971A /* LaunchScreen.storyboard */,
 				29DA04B429BD50B7003E971A /* Info.plist */,
+				29DEBC3A29D8CC9900A7FDB4 /* User.swift */,
+				29DEBC3C29D8CFAC00A7FDB4 /* Team.swift */,
 			);
 			path = RealTimeGolf;
 			sourceTree = "<group>";
@@ -97,7 +160,11 @@
 				29DA04C229BDAAD1003E971A /* MatchDetailController.swift */,
 				29DA04C629BDC0B7003E971A /* UserSearchResultController.swift */,
 				29DA04C829BE4D71003E971A /* CreateTeamsController.swift */,
-				29EA0C4229BE900F00BEA212 /* ManuallyAssignController.swift */,
+				29EA0C4229BE900F00BEA212 /* AssignController.swift */,
+				29DEBC3229D8B06000A7FDB4 /* MainTabController.swift */,
+				29DEBC3429D8C81000A7FDB4 /* BetController.swift */,
+				29DEBC3829D8CB3200A7FDB4 /* StartController.swift */,
+				29DEBC4029D8D6AB00A7FDB4 /* ActiveController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -109,6 +176,7 @@
 				29DA04C429BDB158003E971A /* UserCell.swift */,
 				29DA04CA29BE5212003E971A /* TextFieldCell.swift */,
 				29EA0C4029BE8EE400BEA212 /* TeamSelectCell.swift */,
+				29DEBC3629D8CAD500A7FDB4 /* UserHandicapCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,18 +253,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				29DA04C529BDB158003E971A /* UserCell.swift in Sources */,
-				29EA0C4329BE900F00BEA212 /* ManuallyAssignController.swift in Sources */,
+				29DEBC3529D8C81000A7FDB4 /* BetController.swift in Sources */,
+				29DEBC4129D8D6AB00A7FDB4 /* ActiveController.swift in Sources */,
+				29EA0C4329BE900F00BEA212 /* AssignController.swift in Sources */,
 				29DA04AB29BD50B5003E971A /* ViewController.swift in Sources */,
+				29DEBC3329D8B06000A7FDB4 /* MainTabController.swift in Sources */,
+				290B934729C5DD5600347283 /* CreateDelegate.swift in Sources */,
+				29DEBC3929D8CB3200A7FDB4 /* StartController.swift in Sources */,
 				29DA04CB29BE5212003E971A /* TextFieldCell.swift in Sources */,
 				29DA04BC29BD5944003E971A /* CreateController.swift in Sources */,
 				29DA04A729BD50B5003E971A /* AppDelegate.swift in Sources */,
 				29DA04C929BE4D71003E971A /* CreateTeamsController.swift in Sources */,
 				29EA0C4129BE8EE400BEA212 /* TeamSelectCell.swift in Sources */,
+				29DEBC3D29D8CFAC00A7FDB4 /* Team.swift in Sources */,
 				29DA04C129BD65F3003E971A /* MatchCell.swift in Sources */,
+				290B933E29C5D79000347283 /* CreateMatchComposer.swift in Sources */,
+				29DEBC3729D8CAD500A7FDB4 /* UserHandicapCell.swift in Sources */,
 				29DA04C329BDAAD1003E971A /* MatchDetailController.swift in Sources */,
 				29DA04C729BDC0B7003E971A /* UserSearchResultController.swift in Sources */,
 				29DA04BE29BD6396003E971A /* MatchTableViewController.swift in Sources */,
+				290B934129C5D8DA00347283 /* NetworkPresenter.swift in Sources */,
+				290B934429C5D9B900347283 /* MatchLoadablePresenter.swift in Sources */,
 				29DA04A929BD50B5003E971A /* SceneDelegate.swift in Sources */,
+				290B934A29C5DDCB00347283 /* PostCreateMatch.swift in Sources */,
+				29DEBC3B29D8CC9900A7FDB4 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

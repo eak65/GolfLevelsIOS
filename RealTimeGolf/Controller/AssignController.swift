@@ -7,27 +7,30 @@
 
 import UIKit
 
-struct Team {
-    let name : String
-    let members : [User]
+
+protocol AssignControllerOutput {
+    func manuallyAssign(users: [User])
+    func blindDraw(users: [User])
 }
 
-class ManuallyAssignController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AssignController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var users = [User]()
+    var nextButton : (()->())?
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        users.append(User(name: "Kirk"))
-        users.append(User(name: "Ethan"))
-        users.append(User(name: "Ariana"))
-        users.append(User(name: "Rob"))
-
+        users.append(User(name: "Kirk", handicap: "3.2"))
+        users.append(User(name: "Ethan",handicap: "3.2"))
+        users.append(User(name: "Ariana", handicap: "3.2"))
+        users.append(User(name: "Rob", handicap: "3.2"))
 
         tableView.reloadData()
-
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func next(_ sender: Any) {
+        nextButton?()
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TeamSelectCell") as? TeamSelectCell else {
             fatalError()
@@ -43,7 +46,7 @@ class ManuallyAssignController: UIViewController, UITableViewDelegate, UITableVi
         var optionsArray = [UIAction]()
 
         // loop and populate the actions array
-        for country in ["none selected","old men","young bucks"]{
+        for country in ["none selected","1","2"]{
             // create each action and insert the right country as a title
             let action = UIAction(title: country, state: .off, handler: optionClosure)
                     

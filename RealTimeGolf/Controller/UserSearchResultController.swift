@@ -21,10 +21,10 @@ class UserSearchResultController: UITableViewController, UISearchResultsUpdating
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        users.append(User(name: "Ethan"))
-        users.append(User(name: "Kirk"))
-        users.append(User(name: "Ariana"))
-        users.append(User(name: "Rob"))
+        users.append(User(name: "Ethan",handicap: "3.2"))
+        users.append(User(name: "Kirk", handicap: "3.2"))
+        users.append(User(name: "Ariana", handicap: "3.2"))
+        users.append(User(name: "Rob",handicap: "3.2"))
         
         DispatchQueue.global().async {
             do {
