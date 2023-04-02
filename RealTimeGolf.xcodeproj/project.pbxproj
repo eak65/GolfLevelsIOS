@@ -38,6 +38,7 @@
 		29DEBC4729D9084C00A7FDB4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DEBC4629D9084C00A7FDB4 /* AccountViewController.swift */; };
 		29EA0C4129BE8EE400BEA212 /* TeamSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA0C4029BE8EE400BEA212 /* TeamSelectCell.swift */; };
 		29EA0C4329BE900F00BEA212 /* AssignController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA0C4229BE900F00BEA212 /* AssignController.swift */; };
+		29F4C1DC29DA26D400D8E977 /* BetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F4C1DB29DA26D400D8E977 /* BetCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		29DEBC4629D9084C00A7FDB4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		29EA0C4029BE8EE400BEA212 /* TeamSelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSelectCell.swift; sourceTree = "<group>"; };
 		29EA0C4229BE900F00BEA212 /* AssignController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignController.swift; sourceTree = "<group>"; };
+		29F4C1DB29DA26D400D8E977 /* BetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 				29EA0C4029BE8EE400BEA212 /* TeamSelectCell.swift */,
 				29DEBC3629D8CAD500A7FDB4 /* UserHandicapCell.swift */,
 				29DEBC4229D8DB9000A7FDB4 /* UserHoleCell.swift */,
+				29F4C1DB29DA26D400D8E977 /* BetCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				29DA04CB29BE5212003E971A /* TextFieldCell.swift in Sources */,
 				29DA04BC29BD5944003E971A /* CreateController.swift in Sources */,
 				29DEBC4329D8DB9000A7FDB4 /* UserHoleCell.swift in Sources */,
+				29F4C1DC29DA26D400D8E977 /* BetCell.swift in Sources */,
 				29DA04A729BD50B5003E971A /* AppDelegate.swift in Sources */,
 				29DA04C929BE4D71003E971A /* CreateTeamsController.swift in Sources */,
 				29EA0C4129BE8EE400BEA212 /* TeamSelectCell.swift in Sources */,

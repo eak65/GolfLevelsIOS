@@ -62,6 +62,7 @@ class CreateMatchComposer {
         assignController.nextButton = {
             matchNav.pushViewController(betController, animated: true)
         }
+        betController.users =  [User(name: "Kirk", handicap: "3.5"),User(name: "Ethan",handicap: "3.5")]
         betController.nextButtonPressed = {
             matchNav.pushViewController(startController, animated: true)
         }

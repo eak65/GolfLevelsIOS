@@ -7,14 +7,23 @@
 
 import UIKit
 
-class BetController: UIViewController, UITextFieldDelegate {
+class BetController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
+
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var betTextField: UITextField!
     var nextButtonPressed : (()->())?
+    var users = [User]()
+    var betValue  = 50
     override func viewDidLoad() {
         super.viewDidLoad()
         betTextField.keyboardType = .numberPad
         betTextField.returnKeyType = .done
         addDoneButtonOnKeyboard()
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.betTextField.text = "\(betValue)"
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
     
@@ -39,7 +48,11 @@ class BetController: UIViewController, UITextFieldDelegate {
 
     @objc func doneButtonAction()
     {
+        
         self.betTextField.resignFirstResponder()
+        betValue = Int(self.betTextField.text ?? "50") ?? betValue
+        self.tableView.reloadData()
+
     }
     
 
@@ -49,14 +62,19 @@ class BetController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.endEditing(false)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
-    */
-
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return users.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "BetCell") as? BetCell else {
+            fatalError()
+        }
+        cell.leftLabel.text = users[indexPath.row].name
+        cell.rightLabel.text = "$\(betValue)"
+        return cell
+    }
 }
