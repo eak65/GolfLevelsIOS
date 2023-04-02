@@ -29,7 +29,7 @@ class CreateController: UIViewController, LoadableView {
         super.viewDidLoad()
         datePicker?.date = Date()
         datePicker?.locale = .current
-        datePicker?.preferredDatePickerStyle = .compact
+        datePicker?.preferredDatePickerStyle = .inline
 
     }
     @IBAction func createButton(_ sender: Any) {

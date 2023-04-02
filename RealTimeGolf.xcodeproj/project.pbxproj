@@ -33,6 +33,9 @@
 		29DEBC3B29D8CC9900A7FDB4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DEBC3A29D8CC9900A7FDB4 /* User.swift */; };
 		29DEBC3D29D8CFAC00A7FDB4 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DEBC3C29D8CFAC00A7FDB4 /* Team.swift */; };
 		29DEBC4129D8D6AB00A7FDB4 /* ActiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DEBC4029D8D6AB00A7FDB4 /* ActiveController.swift */; };
+		29DEBC4329D8DB9000A7FDB4 /* UserHoleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DEBC4229D8DB9000A7FDB4 /* UserHoleCell.swift */; };
+		29DEBC4529D907C300A7FDB4 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DEBC4429D907C300A7FDB4 /* SocialViewController.swift */; };
+		29DEBC4729D9084C00A7FDB4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DEBC4629D9084C00A7FDB4 /* AccountViewController.swift */; };
 		29EA0C4129BE8EE400BEA212 /* TeamSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA0C4029BE8EE400BEA212 /* TeamSelectCell.swift */; };
 		29EA0C4329BE900F00BEA212 /* AssignController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EA0C4229BE900F00BEA212 /* AssignController.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +69,9 @@
 		29DEBC3A29D8CC9900A7FDB4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		29DEBC3C29D8CFAC00A7FDB4 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		29DEBC4029D8D6AB00A7FDB4 /* ActiveController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveController.swift; sourceTree = "<group>"; };
+		29DEBC4229D8DB9000A7FDB4 /* UserHoleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHoleCell.swift; sourceTree = "<group>"; };
+		29DEBC4429D907C300A7FDB4 /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
+		29DEBC4629D9084C00A7FDB4 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		29EA0C4029BE8EE400BEA212 /* TeamSelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSelectCell.swift; sourceTree = "<group>"; };
 		29EA0C4229BE900F00BEA212 /* AssignController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +171,8 @@
 				29DEBC3429D8C81000A7FDB4 /* BetController.swift */,
 				29DEBC3829D8CB3200A7FDB4 /* StartController.swift */,
 				29DEBC4029D8D6AB00A7FDB4 /* ActiveController.swift */,
+				29DEBC4429D907C300A7FDB4 /* SocialViewController.swift */,
+				29DEBC4629D9084C00A7FDB4 /* AccountViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -177,6 +185,7 @@
 				29DA04CA29BE5212003E971A /* TextFieldCell.swift */,
 				29EA0C4029BE8EE400BEA212 /* TeamSelectCell.swift */,
 				29DEBC3629D8CAD500A7FDB4 /* UserHandicapCell.swift */,
+				29DEBC4229D8DB9000A7FDB4 /* UserHoleCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -254,14 +263,17 @@
 			files = (
 				29DA04C529BDB158003E971A /* UserCell.swift in Sources */,
 				29DEBC3529D8C81000A7FDB4 /* BetController.swift in Sources */,
+				29DEBC4729D9084C00A7FDB4 /* AccountViewController.swift in Sources */,
 				29DEBC4129D8D6AB00A7FDB4 /* ActiveController.swift in Sources */,
 				29EA0C4329BE900F00BEA212 /* AssignController.swift in Sources */,
 				29DA04AB29BD50B5003E971A /* ViewController.swift in Sources */,
 				29DEBC3329D8B06000A7FDB4 /* MainTabController.swift in Sources */,
+				29DEBC4529D907C300A7FDB4 /* SocialViewController.swift in Sources */,
 				290B934729C5DD5600347283 /* CreateDelegate.swift in Sources */,
 				29DEBC3929D8CB3200A7FDB4 /* StartController.swift in Sources */,
 				29DA04CB29BE5212003E971A /* TextFieldCell.swift in Sources */,
 				29DA04BC29BD5944003E971A /* CreateController.swift in Sources */,
+				29DEBC4329D8DB9000A7FDB4 /* UserHoleCell.swift in Sources */,
 				29DA04A729BD50B5003E971A /* AppDelegate.swift in Sources */,
 				29DA04C929BE4D71003E971A /* CreateTeamsController.swift in Sources */,
 				29EA0C4129BE8EE400BEA212 /* TeamSelectCell.swift in Sources */,

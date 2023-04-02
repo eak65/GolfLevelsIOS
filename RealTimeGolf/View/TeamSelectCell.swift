@@ -13,6 +13,7 @@ class TeamSelectCell: UITableViewCell {
     @IBOutlet weak var teamNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .none
         // Initialization code
     }
 
